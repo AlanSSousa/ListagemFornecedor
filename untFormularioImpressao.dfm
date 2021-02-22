@@ -1,0 +1,162 @@
+object formularioImpressao: TformularioImpressao
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'formularioImpressao'
+  ClientHeight = 219
+  ClientWidth = 434
+  Color = clBlack
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblNome: TLabel
+    Left = 0
+    Top = 7
+    Width = 52
+    Height = 24
+    Caption = 'Nome'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lblCnpjCpf: TLabel
+    Left = 0
+    Top = 70
+    Width = 121
+    Height = 24
+    Caption = 'C.N.P.J/C.P.F.'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lblData: TLabel
+    Left = 0
+    Top = 132
+    Width = 153
+    Height = 24
+    Caption = 'Data do cadastro'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object edtNome: TEdit
+    Left = 0
+    Top = 32
+    Width = 435
+    Height = 32
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    MaxLength = 150
+    ParentFont = False
+    TabOrder = 0
+  end
+  object edtDataCadastro: TMaskEdit
+    Left = 0
+    Top = 157
+    Width = 433
+    Height = 32
+    EditMask = '!99/99/0000;1;_'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    MaxLength = 10
+    ParentFont = False
+    TabOrder = 2
+    Text = '  /  /    '
+  end
+  object edtCnpjCpf: TEdit
+    Left = 0
+    Top = 94
+    Width = 435
+    Height = 32
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    MaxLength = 20
+    ParentFont = False
+    TabOrder = 1
+  end
+  object btnImprimir: TButton
+    Left = 0
+    Top = 188
+    Width = 218
+    Height = 30
+    Caption = 'Imprimir'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+    OnClick = btnImprimirClick
+  end
+  object btnVoltar: TButton
+    Left = 217
+    Top = 188
+    Width = 217
+    Height = 30
+    Caption = 'Voltar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 4
+    OnClick = btnVoltarClick
+  end
+  object conexao: TZConnection
+    ControlsCodePage = cCP_UTF16
+    ClientCodepage = 'UTF8'
+    Catalog = ''
+    Properties.Strings = (
+      'codepage=UTF8')
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'banco_1'
+    User = 'postgres'
+    Password = 'senha123'
+    Protocol = 'postgresql-9'
+    LibraryLocation = 'C:\Users\alans\Documents\GitHub\ListagemFornecedor\libpq.dll'
+    Left = 374
+    Top = 30
+  end
+  object consulta: TZQuery
+    Connection = conexao
+    Params = <>
+    Left = 328
+    Top = 30
+  end
+  object consulta_2: TZQuery
+    Connection = conexao
+    Params = <>
+    Left = 264
+    Top = 63
+  end
+end
