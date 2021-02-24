@@ -138,7 +138,7 @@ object formularioImpressao: TformularioImpressao
     Properties.Strings = (
       'codepage=UTF8')
     HostName = 'localhost'
-    Port = 5432
+    Port = 45432
     Database = 'banco_1'
     User = 'postgres'
     Password = 'senha123'
